@@ -1,6 +1,6 @@
 # code your #valid_move? method here
 
-def space?(index)
+def valid_move?(index)
   if index.between(0,8)
     true
   else
@@ -16,14 +16,6 @@ def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
     true
   if board[index] == "" || board[index] == " " || board[index] == nil
-    false
-  end
-end
-
-def valid_move?(index)
-  if space? && !position_taken
-    true
-  else
     false
   end
 end
